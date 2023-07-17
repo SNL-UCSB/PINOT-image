@@ -1,0 +1,9 @@
+master: pinot.cs.ucsb.edu
+
+grains:
+  architecture:
+    - arm
+    - arm64
+  platform: Raspberry Pi
+ 
+master_tries: -1

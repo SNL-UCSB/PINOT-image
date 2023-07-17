@@ -1,0 +1,19 @@
+SUBSYSTEM=="thermal"
+KERNEL=="thermal_zone0"
+
+# mid-aggressive settings
+# If the temp hits 65c, turn on the fan. Turn it off again when it goes back down to 30.
+ATTR{trip_point_3_temp}="65000"
+ATTR{trip_point_3_hyst}="2000"
+#
+# If the temp hits 70c, higher RPM.
+ATTR{trip_point_2_temp}="70000"
+ATTR{trip_point_2_hyst}="5000"
+#
+# If the temp hits 75c, higher RPM.
+ATTR{trip_point_1_temp}="75000"
+ATTR{trip_point_1_hyst}="5000"
+#
+# If the temp hits 85c, highest RPM.
+ATTR{trip_point_0_temp}="85000"
+ATTR{trip_point_0_hyst}="5000"
